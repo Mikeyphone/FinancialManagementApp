@@ -1,8 +1,5 @@
 // Expense List component to display the list of expenses and the total amount spent.
-import React from 'react';
-
 function ExpenseList({ expenses }) {
-  // Dynamically calculate the total from the array
   const total = expenses.reduce((sum, item) => sum + item.amount, 0);
 
   return (
@@ -13,7 +10,13 @@ function ExpenseList({ expenses }) {
       </div>
       
       <ul className="expense-list">
-        {expenses.length === 0 && <p>No expenses logged yet.</p>}
+        {/* Update this line to guide the user */}
+        {expenses.length === 0 && (
+          <li className="expense-item" style={{ justifyContent: 'center', color: '#7f8c8d', fontStyle: 'italic' }}>
+            No expenses logged yet. Use the form to add your first entry!
+          </li>
+        )}
+        
         {expenses.map((expense) => (
           <li key={expense.id} className="expense-item">
             <div className="expense-details">

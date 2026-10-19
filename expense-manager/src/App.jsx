@@ -7,19 +7,11 @@ import ExpenseList from './ExpenseList';
 import './App.css';
 
 function App() {
-  // Meaningful UseState hook: View management flag (No React Router)
   const [currentView, setCurrentView] = useState('dashboard');
-
-  // Used for dark mode toggle
   const [theme, setTheme] = useState('light');
 
   // Meaningful UseState hook: Managing the primary dynamic array
-  const [expenses, setExpenses] = useState([
-    { id: 1, title: 'Crunch Fitness Membership', amount: 15.00, category: 'Health' },
-    { id: 2, title: 'Whataburger Takeout', amount: 12.50, category: 'Food' },
-    { id: 3, title: 'Quick Quack Car Wash', amount: 20.00, category: 'Auto' },
-    { id: 4, title: 'Camry Hybrid Gas', amount: 35.00, category: 'Auto' }
-  ]);
+  const [expenses, setExpenses] = useState([]);
 
   // Function passed down as a prop to update state
   const addExpense = (newExpense) => {
