@@ -23,8 +23,19 @@
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+[data-theme="dark"] {
+  --bg-main: #121212;
+  --bg-surface: #1e1e1e;
+  --text-main: #e0e0e0;
+  --text-heading: #ffffff;
+  --border-main: #333333;
+  --border-light: #2c2c2c;
+  --btn-inactive: #333333;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-body { background-color: var(--bg-main); color: var(--text-main); }
+body { margin: 0; padding: 0; }
 .app-container { max-width: 900px; margin: 0 auto; padding: 20px; }
 
 /* Header & Nav */
@@ -52,3 +63,10 @@ nav button.active { background: var(--primary-color); color: var(--text-light); 
 .expense-details { display: flex; flex-direction: column; }
 .category-badge { font-size: 0.75rem; background: var(--accent-color); color: var(--text-light); padding: 3px 8px; border-radius: 12px; width: fit-content; margin-top: 4px; }
 .expense-amount { font-weight: bold; font-size: 1.1rem; }
+
+.app-wrapper {
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
