@@ -34,7 +34,7 @@ function ExpenseForm({ onAddExpense }) {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder="e.g., Bill Miller Lunch"
+            placeholder="e.g., School Lunch, Gas, Gym Membership"
           />
         </div>
         <div className="form-group">
